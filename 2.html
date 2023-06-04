@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>웹퍼 기말</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<style>
+		box-sixing{border-width: }
+		html{font-family: 'Noto Sans KR', sans-serif;width: 100%; margin: auto}
+		body,h2,img,h1,p,h4,ul,li,section,video,h5,section,h6,div,img,header,nav{margin:0;padding: 0px;}
+		img{display: block;width: 100%}
+		header{height: 900px; background:url(1.png);background-size:cover;margin:0;padding: 0px; }
+		section,footer,{margin: auto;}
+		h2{;font-size: 1.5em; line-height: ;word-spacing: 3px; font-weight: 500; word-spacing: −3px;letter-spacing: −10px; line-height: 1.4;  ;color: white;	text-align: center; margin-top: 40px}
+		.s2{height: 1000px;background: url(4.png);background-size:cover;display: flex;
+    align-items: center;
+    justify-content: center; }
+		.a{   display: flex;
+				justify-content: center;padding-top:370px  }
+		.img{width: 100%}}
+		.s2 h2{;margin-top: 0px;font-size: 2em;text-align: right;line-height: 1.5;margin-bottom: 100px ;}
+		p{margin-top: 20px; line-height: 2}
+		.s1{height: 1100px;background: url(b4.png)}
+
+		.s3{height: 900px;background: url(5.png);background-size:cover}
+		.s4{height: 1000px; position: relative;
+            width: 100%;
+            overflow: hidden;}
+            
+        .s4 video{ position: absolute;filter: brightness(0.5);
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;}
+            .overlay-text {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    z-index: 1;
+		    text-align: center;
+		    color: white;}
+		.s5{height: 1000px; position: relative;
+            width: 100%;
+            overflow: hidden;}
+        .s5 video{ position: absolute;filter: brightness(0.5);
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;}
+            .overlay-text {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    z-index: 1;
+		    text-align: center;
+		    color: white;}
+		  .s6{height: 1000px;background: black;  
+		   
+		    justify-content: center;
+		    align-items: center;
+		    text-align: center;}
+		    .s6 img{width: 20%;padding-left: 710px; padding-top: 30px}
+		  .s6 p{margin-top: 0px;color: white;justify-content: center;
+		    align-items: center;padding-top: 290px;
+		    text-align: center;}}
+		
+		.s2{height: 1000px;background: url(4.png);background-size:cover;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+		.a{   display: flex;
+				justify-content: center;padding-top:370px  }
+		.img{width: 100%}
+		video{width: 20%;mix-blend-mode: difference;padding-top: 340px;padding-left: 5px;padding-right: 5px}
+		.video{ display: flex;
+				justify-content: center;}
+
+		#typewriter 
+		{overflow: hidden; 
+			border-right: .1em solid white; 설정 */
+				white-space: nowrap; 
+				white-space: pre;
+				text-align: center; 
+			font-size: 4em; font-weight: 900;word-spacing: −1px; letter-spacing: −2px
+			; line-height: 1.4;letter-spacing: −10px
+
+			font-family: monospace;color: white;}
+
+		nav{height: 58px;width:100%; position:fixed; }
+		nav p{;color: #D8D8D8 }
+		li{list-style-type: none;}
+
+		.wrapper{; margin: auto; padding: 11px; }
+
+		.menu{display: flex;width: 1100px; justify-content:space-between;float:center; margin:auto; }
+		img{width: 100%; height: auto;}
+		a{display: block;width: 80px; height: 35px;text-align: center;background: #1C1C1C;color: #D8D8D8;text-decoration: none; padding: 0px 20px; line-height: 32px; border-radius: 5px;}
+		a:hover{transition:all 0.5s;background: white; color:black;}
+		.bg-tea{background:url(img3.jpg); background-size: cover;}
+		.flex{display: flex;  padding-top: 35px; padding-bottom: 100px;}
+		.column-3{width: 29%;  }
+		.fav{padding-top: 40px
+
+
+
+		 
+
+	</style>
+
+	<script>
+		function fadeOut(element) {
+			element.style.transition = "opacity 2s";
+			element.style.opacity = "0";
+		}
+
+		function typeWriter() {
+			var text = "안녕? 나는 너의 가이드, 소라야.\n여긴 수수께끼를 풀며 자아를 탐색하는 공간이야.\n같이 모험을 떠나보지 않을래?";
+			var speed = 100;
+
+			var i = 0;
+			var typewriter = document.getElementById("typewriter");
+			typewriter.innerHTML = "";
+			var timer = setInterval(function() {
+				typewriter.innerHTML += text.charAt(i);
+				i++;
+				if (i >= text.length) {
+					clearInterval(timer);
+					setTimeout(function() {
+						fadeOut(typewriter);
+					}, 500); // 3초 후에 텍스트가 투명하게 사라짐
+				}
+			}, speed);
+		}
+	</script>
+</head>
+
+<body>
+	<nav class="main-navigator">
+		<div class="wrapper">
+			<ul class="menu">
+				<li><a href="">심리</a></li>
+				<li><a href="">테스트</a></li>
+				<li><a href="">나를</a></li>
+				<li><a href="">찾는</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header>
+		<div class="a">
+			<h1 id="typewriter"></h1>
+			<script>
+				typeWriter();
+			</script>
+		</div>
+	</header>
+
+	<section class="s1">
+		<div class="video">
+			<video src="1.mp4" autoplay loop muted></video>
+			<video src="1.mp4" autoplay loop muted></video>
+			<video src="1.mp4" autoplay loop muted></video> 
+			</div>
+			<h2> 지금부터 너에게 어떤 상황을 주고 질문할거야.<br>
+					넌 그것에 대답을 하면 돼.. 쉽지?</h2>
+	</section>
+
+	<section class="s2">
+	
+	<h2 >어쩌면 자신에 대해 모르고 있던 것들을<br>발견할 수도 있을지 몰라.</h2>
+	
+	</section>
+
+	<section class="s3">	
+	</section>
+
+	<section class="s5">
+		  <video src="v.mp4" autoplay loop muted></video>
+		   <div class="overlay-text">
+        <h2>집에 혼자 있는 당신.<br>갑자기 어떤 것을 보고 소스라치게 놀라 달아납니다.<br>당신은 무엇을 보았던 걸까요?</h2>
+        <p> a. 낯선 사람
+        <br>b.귀신
+        <br>c. 벌레
+        <br>d. 기타</p>
+
+      
+    </div>
+	</section>
+
+	<section class="s6">
+		
+
+		<p>a. 낯선 사람을 선택한 당신!
+			<br>b. 귀신을 선택한 당신!
+			<br>c. 벌레를 선택한 당신!
+			<br>d. 기타를 선택한 당신!
+			<br>.
+			<br>.
+			<br>.</p>
+
+			<img src="8.png">
+
+	</section>
+
+	<section class="s4">
+		  <video src="v2.mp4" autoplay loop muted></video>
+		   <div class="overlay-text">
+        <h2>정신을 차려보니 새로운 공간에 도착한 당신.<br>이 곳은 어디일까요?</h2>
+        <p> a. 집 앞 공터
+        <br>b.우거진 숲속
+        <br>c.버려진 유원지
+        <br>d.거대한 백화점
+	</section>
+
+	<section class="s6">
+		<p>a. 집 앞 공터를 선택한 당신!
+			<br>b. 귀신을 선택한 당신!
+			<br>c. 벌레를 선택한 당신!
+			<br>d. 기타를 선택한 당신!
+			<br>.<br>.<br>.
+		</p>
+			<img src="8.png">
+	</section>
+
+<footer>
+	<img src="f.png">
+	
+</footer>
+
+
+
+</body>
+</html>
